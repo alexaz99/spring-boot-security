@@ -34,6 +34,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .roles("ADMIN");
     }
 
+    /**
+     * You don’t want to store passwords in clear format!
+     * You need to create a @Bean of type PasswordEncoder
+     */
     @Bean
     public PasswordEncoder getPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
