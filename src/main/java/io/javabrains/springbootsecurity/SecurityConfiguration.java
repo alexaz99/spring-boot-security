@@ -37,6 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     /**
      * You don’t want to store passwords in clear format!
      * You need to create a @Bean of type PasswordEncoder
+     * For test purpose use NoOpPasswordEncoder, means clear text
      */
     @Bean
     public PasswordEncoder getPasswordEncoder() {
